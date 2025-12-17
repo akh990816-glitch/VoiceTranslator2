@@ -1,6 +1,6 @@
 # 🎙️ Gemini AI Voice Translator (Serverless Context-Aware Interpreter)
 
-> **Google Gemini 1.5 Flash 모델과 GCP Serverless 아키텍처를 활용한 맥락 인식 기반의 양방향 음성 통역 안드로이드 앱**
+> **Google Gemini 2.0 Flash 모델과 GCP Serverless 아키텍처를 활용한 맥락 인식 기반의 양방향 음성 통역 안드로이드 앱**
 
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.9.0-7F52FF?style=flat&logo=kotlin&logoColor=white)
 ![Android Studio](https://img.shields.io/badge/Android%20Studio-Hedgehog-3DDC84?style=flat&logo=android-studio&logoColor=white)
@@ -10,7 +10,7 @@
 
 ## 📖 프로젝트 소개 (Overview)
 기존의 규칙 기반 번역기(Rule-based/SMT)가 가진 딱딱한 직역 투와 문맥 파악의 한계를 극복하기 위해 개발된 프로젝트입니다. 
-**Google Gemini 1.5 Flash**의 강력한 LLM 성능을 활용하여, 대화의 맥락(Context)을 이해하고 생략된 주어를 추론하여 자연스러운 통역 결과를 제공합니다.
+**Google Gemini 2.0 Flash**의 강력한 LLM 성능을 활용하여, 대화의 맥락(Context)을 이해하고 생략된 주어를 추론하여 자연스러운 통역 결과를 제공합니다.
 
 또한, 학생 개발자 수준에서 놓치기 쉬운 **보안(Secret Manager)**과 **비용 효율성(Serverless)**을 고려하여 프로덕션 레벨의 아키텍처를 설계했습니다.
 
@@ -38,7 +38,7 @@ flowchart TD
     Server -- "API Key 조회 (Lazy Loading)" --> Secret["🔒 Secret Manager"]
     Secret -- "Key 반환" --> Server
     
-    Server -- "프롬프트 + 오디오" --> AI(("🧠 Gemini 1.5 Flash"))
+    Server -- "프롬프트 + 오디오" --> AI(("🧠 Gemini 2.0 Flash"))
     AI -- "맥락 번역 결과" --> Server
     
     Server -- "JSON 응답" --> App
@@ -62,7 +62,7 @@ flowchart TD
 * **Security**: Google Secret Manager, IAM (Identity and Access Management)
 
 ### 🧠 AI Model
-* **Engine**: Google Gemini 1.5 Flash
+* **Engine**: Google Gemini 2.0 Flash
 * **Technique**: Prompt Engineering (Context-Aware, Negative Prompting, Persona)
 
 ---
