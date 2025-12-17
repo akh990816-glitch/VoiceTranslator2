@@ -108,3 +108,12 @@ You are a professional interpreter with 20 years of experience.
 [Output Format]
 Provide ONLY the translated text.
 """
+
+
+
+
+
+https://github.com/user-attachments/assets/a68ca1db-efdb-4c6a-8913-dca33315345a
+
+
+
